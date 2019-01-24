@@ -17,8 +17,11 @@ import { Grid, Row, Col } from "react-bootstrap";
 
 import appRoutes from "routes/app.jsx";
 
+//const __SIMPLE_API_ENDPOINT__ =
+//  "https://api.graph.cool/simple/v1/cjqrtcolb4l070100hlkm0oc5";
+
 const __SIMPLE_API_ENDPOINT__ =
-  "https://api.graph.cool/simple/v1/cjqrtcolb4l070100hlkm0oc5";
+  "http://localhost:60000/simple/v1/cjradbi25000z0140ltc0c70q";
 
 const httpLink = new HttpLink({
   uri: __SIMPLE_API_ENDPOINT__

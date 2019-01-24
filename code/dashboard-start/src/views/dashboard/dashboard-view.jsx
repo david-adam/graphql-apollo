@@ -84,10 +84,12 @@ class Dashboard extends Component {
               <StatsCard
                 bigIcon={<i className="pe-7s-wallet text-success" />}
                 statsText="Revenue"
-                statsValue={this.props.DashboardQuery.allOrders.reduce(
-                  (acc, order) => acc + order.amount,
-                  0
-                )}
+                statsValue={parseFloat(
+                  this.props.DashboardQuery.allOrders.reduce(
+                    (acc, order) => acc + order.amount,
+                    0
+                  )
+                ).toFixed(2)}
                 statsIcon={<i className="fa fa-calendar-o" />}
                 statsIconText="Last day"
               />

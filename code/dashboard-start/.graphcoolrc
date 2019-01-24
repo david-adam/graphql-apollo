@@ -1,3 +1,10 @@
+graphcool-framework:
+  clusters:
+    local:
+      host: 'http://127.0.0.1:60000'
+      faasHost: 'http://127.0.0.1:60050'
+      clusterSecret: >-
+        eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDgzMTgxMjcsImNsaWVudElkIjoiY2pyYWM4MWt3MDAwMDAxNDByOHVpdXNjbyJ9.7a0zK8GcB3IGwFOEYZtzSe8g2JwKRfY67jwI8RaFQHc
 targets:
-  dev: local/cjf0ed8ek00040110h9x1ts39
-  default: dev
+  default: local
+  local: local/cjradbi25000z0140ltc0c70q

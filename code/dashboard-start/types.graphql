@@ -11,7 +11,6 @@
 #   # posts: [Post!]! @relation(name: "UserPosts")
 # }
 
-
 # Uncomment the model below as well
 
 # type Post @model {
@@ -40,7 +39,8 @@ type Order @model {
   id: ID! @isUnique
   isCompleted: Boolean!
   orderCreatedAt: DateTime!
-  productQuantityPerOrders: [ProductQuantityPerOrder!]! @relation(name: "ProductQuantityPerOrderOnOrder")
+  productQuantityPerOrders: [ProductQuantityPerOrder!]!
+    @relation(name: "ProductQuantityPerOrderOnOrder")
   products: [Product!]! @relation(name: "OrderOnProduct")
 }
 
@@ -51,7 +51,8 @@ type Product @model {
   name: String!
   orders: [Order!]! @relation(name: "OrderOnProduct")
   productImageUrl: String
-  productQuantityPerOrders: [ProductQuantityPerOrder!]! @relation(name: "ProductQuantityPerOrderOnProduct")
+  productQuantityPerOrders: [ProductQuantityPerOrder!]!
+    @relation(name: "ProductQuantityPerOrderOnProduct")
 }
 
 type ProductQuantityPerOrder @model {
@@ -77,4 +78,6 @@ type Notification @model {
 enum NotificationType {
   Info
   Warning
+  Success
+  Danger
 }
